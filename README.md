@@ -13,6 +13,7 @@ cd medusa
 # тут нужно продублировать имеющийся файл env (например .env.template или .env.example) и переименовать его в .env
 # прописать креды от БД Postgres в переменную DATABASE_URL, указав там имя БД, логин и пароль
 yarn
+npx medusa seed --seed-file=data/seed.json # применение миграций и наполенение БД тетсовыми товарами
 yarn dev
 
 # 3. Ставим зависимости фронта и запускаем
@@ -32,6 +33,7 @@ cd medusa
 # тут нужно продублировать имеющийся файл env (например .env.template или .env.example) и переименовать его в .env
 # прописать креды от БД Postgres в переменную DATABASE_URL, указав там имя БД, логин и пароль
 yarn
+npx medusa migrations run # миграции
 yarn build
 yarn start
 

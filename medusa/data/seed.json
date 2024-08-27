@@ -1,59 +1,30 @@
 {
   "store": {
-    "currencies": [
-      "eur",
-      "usd"
-    ]
+    "currencies": ["rub", "usd"]
   },
   "users": [
     {
-      "email": "admin@medusa-test.com",
-      "password": "supersecret"
+      "email": "admin@gmail.com",
+      "password": "123321"
     }
   ],
   "regions": [
     {
-      "id": "test-region-eu",
-      "name": "EU",
-      "currency_code": "eur",
+      "id": "region-ru",
+      "name": "RU",
+      "currency_code": "rub",
       "tax_rate": 0,
-      "payment_providers": [
-        "manual"
-      ],
+      "payment_providers": ["manual"],
       "fulfillment_providers": [
         "manual"
       ],
-      "countries": [
-        "gb",
-        "de",
-        "dk",
-        "se",
-        "fr",
-        "es",
-        "it"
-      ]
-    },
-    {
-      "id": "test-region-na",
-      "name": "NA",
-      "currency_code": "usd",
-      "tax_rate": 0,
-      "payment_providers": [
-        "manual"
-      ],
-      "fulfillment_providers": [
-        "manual"
-      ],
-      "countries": [
-        "us",
-        "ca"
-      ]
+      "countries": ["ru"]
     }
   ],
   "shipping_options": [
     {
       "name": "PostFake Standard",
-      "region_id": "test-region-eu",
+      "region_id": "region-ru",
       "provider_id": "manual",
       "data": {
         "id": "manual-fulfillment"
@@ -63,7 +34,7 @@
     },
     {
       "name": "PostFake Express",
-      "region_id": "test-region-eu",
+      "region_id": "region-ru",
       "provider_id": "manual",
       "data": {
         "id": "manual-fulfillment"
@@ -73,7 +44,7 @@
     },
     {
       "name": "PostFake Return",
-      "region_id": "test-region-eu",
+      "region_id": "region-ru",
       "provider_id": "manual",
       "data": {
         "id": "manual-fulfillment"
@@ -84,49 +55,7 @@
     },
     {
       "name": "I want to return it myself",
-      "region_id": "test-region-eu",
-      "provider_id": "manual",
-      "data": {
-        "id": "manual-fulfillment"
-      },
-      "price_type": "flat_rate",
-      "is_return": true,
-      "amount": 0
-    },
-    {
-      "name": "FakeEx Standard",
-      "region_id": "test-region-na",
-      "provider_id": "manual",
-      "data": {
-        "id": "manual-fulfillment"
-      },
-      "price_type": "flat_rate",
-      "amount": 800
-    },
-    {
-      "name": "FakeEx Express",
-      "region_id": "test-region-na",
-      "provider_id": "manual",
-      "data": {
-        "id": "manual-fulfillment"
-      },
-      "price_type": "flat_rate",
-      "amount": 1200
-    },
-    {
-      "name": "FakeEx Return",
-      "region_id": "test-region-na",
-      "provider_id": "manual",
-      "data": {
-        "id": "manual-fulfillment"
-      },
-      "price_type": "flat_rate",
-      "is_return": true,
-      "amount": 800
-    },
-    {
-      "name": "I want to return it myself",
-      "region_id": "test-region-na",
+      "region_id": "region-ru",
       "provider_id": "manual",
       "data": {
         "id": "manual-fulfillment"
@@ -138,221 +67,75 @@
   ],
   "products": [
     {
-      "title": "Medusa T-Shirt",
+      "title": "Защитные стикеры",
       "categories": [
         {
-          "id": "pcat_shirts"
+          "id": "pcat_stickers"
         }
       ],
       "subtitle": null,
-      "description": "Reimagine the feeling of a classic T-shirt. With our cotton T-shirts, everyday essentials no longer have to be ordinary.",
-      "handle": "t-shirt",
+      "description": "Предлагаем вам уникальные защитные стикеры, которые обеспечат надежную защиту вашего ценного имущества. Серия голографических наклеек самая современная и эффективная защита от несанкционированного доступа и подделки. Эти стикеры обладают особым свойством, которое позволяет их использовать для защиты большого разнообразия предметов: электроники, документов, сумок, упаковки и т.д.",
+      "handle": "sticker",
       "is_giftcard": false,
       "weight": 400,
       "images": [
-        "https://medusa-public-images.s3.eu-west-1.amazonaws.com/tee-black-front.png",
-        "https://medusa-public-images.s3.eu-west-1.amazonaws.com/tee-black-back.png",
-        "https://medusa-public-images.s3.eu-west-1.amazonaws.com/tee-white-front.png",
-        "https://medusa-public-images.s3.eu-west-1.amazonaws.com/tee-white-back.png"
+        "https://gologram-print.ru/thumb/2/V6CFKtjlhNWyn5dA_78uzA/1000r/d/55395710_1.jpg"
       ],
       "options": [
         {
           "title": "Size",
-          "values": [
-            "S",
-            "M",
-            "L",
-            "XL"
-          ]
+          "values": ["30x30", "50x50"]
         },
         {
-          "title": "Color",
+          "title": "Покрытие",
           "values": [
-            "Black",
-            "White"
+            "Крутое",
+            "Обычное"
           ]
         }
       ],
       "variants": [
         {
-          "title": "S / Black",
+          "title": "30x30",
           "prices": [
             {
-              "currency_code": "eur",
-              "amount": 1950
+              "currency_code": "rub",
+              "amount": 19500
             },
             {
               "currency_code": "usd",
-              "amount": 2200
+              "amount": 220
             }
           ],
           "options": [
             {
-              "value": "S"
+              "value": "30x30"
             },
             {
-              "value": "Black"
+              "value": "Крутое"
             }
           ],
           "inventory_quantity": 100,
           "manage_inventory": true
         },
         {
-          "title": "S / White",
+          "title": "50x50",
           "prices": [
             {
-              "currency_code": "eur",
-              "amount": 1950
+              "currency_code": "rub",
+              "amount": 4700
             },
             {
               "currency_code": "usd",
-              "amount": 2200
+              "amount": 50
             }
           ],
           "options": [
             {
-              "value": "S"
+              "value": "50x50"
             },
             {
-              "value": "White"
-            }
-          ],
-          "inventory_quantity": 100,
-          "manage_inventory": true
-        },
-        {
-          "title": "M / Black",
-          "prices": [
-            {
-              "currency_code": "eur",
-              "amount": 1950
-            },
-            {
-              "currency_code": "usd",
-              "amount": 2200
-            }
-          ],
-          "options": [
-            {
-              "value": "M"
-            },
-            {
-              "value": "Black"
-            }
-          ],
-          "inventory_quantity": 100,
-          "manage_inventory": true
-        },
-        {
-          "title": "M / White",
-          "prices": [
-            {
-              "currency_code": "eur",
-              "amount": 1950
-            },
-            {
-              "currency_code": "usd",
-              "amount": 2200
-            }
-          ],
-          "options": [
-            {
-              "value": "M"
-            },
-            {
-              "value": "White"
-            }
-          ],
-          "inventory_quantity": 100,
-          "manage_inventory": true
-        },
-        {
-          "title": "L / Black",
-          "prices": [
-            {
-              "currency_code": "eur",
-              "amount": 1950
-            },
-            {
-              "currency_code": "usd",
-              "amount": 2200
-            }
-          ],
-          "options": [
-            {
-              "value": "L"
-            },
-            {
-              "value": "Black"
-            }
-          ],
-          "inventory_quantity": 100,
-          "manage_inventory": true
-        },
-        {
-          "title": "L / White",
-          "prices": [
-            {
-              "currency_code": "eur",
-              "amount": 1950
-            },
-            {
-              "currency_code": "usd",
-              "amount": 2200
-            }
-          ],
-          "options": [
-            {
-              "value": "L"
-            },
-            {
-              "value": "White"
-            }
-          ],
-          "inventory_quantity": 100,
-          "manage_inventory": true
-        },
-        {
-          "title": "XL / Black",
-          "prices": [
-            {
-              "currency_code": "eur",
-              "amount": 1950
-            },
-            {
-              "currency_code": "usd",
-              "amount": 2200
-            }
-          ],
-          "options": [
-            {
-              "value": "XL"
-            },
-            {
-              "value": "Black"
-            }
-          ],
-          "inventory_quantity": 100,
-          "manage_inventory": true
-        },
-        {
-          "title": "XL / White",
-          "prices": [
-            {
-              "currency_code": "eur",
-              "amount": 1950
-            },
-            {
-              "currency_code": "usd",
-              "amount": 2200
-            }
-          ],
-          "options": [
-            {
-              "value": "XL"
-            },
-            {
-              "value": "White"
+              "value": "Обычное"
             }
           ],
           "inventory_quantity": 100,
@@ -361,603 +144,86 @@
       ]
     },
     {
-      "title": "Medusa Sweatshirt",
+      "title": "Голограмма",
       "categories": [
         {
-          "id": "pcat_shirts"
+          "id": "pcat_hologramms"
         }
       ],
       "subtitle": null,
-      "description": "Reimagine the feeling of a classic sweatshirt. With our cotton sweatshirt, everyday essentials no longer have to be ordinary.",
-      "handle": "sweatshirt",
+      "description": "Голограммы на прозрачной пленке представляют собой не только стильный и красочный элемент декора, но и функциональный инструмент. Они могут использоваться для рекламных целей, чтобы привлечь внимание к вашему бренду или продукту, а также служить средством безопасности, поскольку их сложные дизайны и 3D-эффекты трудно подделать или скопировать.",
+      "handle": "hologramma",
       "is_giftcard": false,
       "weight": 400,
       "images": [
-        "https://medusa-public-images.s3.eu-west-1.amazonaws.com/sweatshirt-vintage-front.png",
-        "https://medusa-public-images.s3.eu-west-1.amazonaws.com/sweatshirt-vintage-back.png"
+        "https://gologram-print.ru/thumb/2/4hMZrqCDIg1wjvsBKAx82Q/1000r/d/55395707_2.jpg"
       ],
       "options": [
         {
           "title": "Size",
           "values": [
-            "S",
-            "M",
-            "L",
-            "XL"
+            "30x30",
+            "50x50",
+            "100x100"
           ]
         }
       ],
       "variants": [
         {
-          "title": "S",
+          "title": "30x30",
           "prices": [
             {
-              "currency_code": "eur",
-              "amount": 2950
+              "currency_code": "rub",
+              "amount": 60
             },
             {
               "currency_code": "usd",
-              "amount": 3350
+              "amount": 1
             }
           ],
           "options": [
             {
-              "value": "S"
+              "value": "30x30"
             }
           ],
           "inventory_quantity": 100,
           "manage_inventory": true
         },
         {
-          "title": "M",
+          "title": "50x50",
           "prices": [
             {
-              "currency_code": "eur",
-              "amount": 2950
+              "currency_code": "rub",
+              "amount": 50
             },
             {
               "currency_code": "usd",
-              "amount": 3350
+              "amount": 1
             }
           ],
           "options": [
             {
-              "value": "M"
+              "value": "50x50"
             }
           ],
           "inventory_quantity": 100,
           "manage_inventory": true
         },
         {
-          "title": "L",
+          "title": "100x100",
           "prices": [
             {
-              "currency_code": "eur",
-              "amount": 2950
+              "currency_code": "rub",
+              "amount": 100
             },
             {
               "currency_code": "usd",
-              "amount": 3350
+              "amount": 2
             }
           ],
           "options": [
             {
-              "value": "L"
-            }
-          ],
-          "inventory_quantity": 100,
-          "manage_inventory": true
-        },
-        {
-          "title": "XL",
-          "prices": [
-            {
-              "currency_code": "eur",
-              "amount": 2950
-            },
-            {
-              "currency_code": "usd",
-              "amount": 3350
-            }
-          ],
-          "options": [
-            {
-              "value": "XL"
-            }
-          ],
-          "inventory_quantity": 100,
-          "manage_inventory": true
-        }
-      ]
-    },
-    {
-      "title": "Medusa Sweatpants",
-      "categories": [
-        {
-          "id": "pcat_pants"
-        }
-      ],
-      "subtitle": null,
-      "description": "Reimagine the feeling of classic sweatpants. With our cotton sweatpants, everyday essentials no longer have to be ordinary.",
-      "handle": "sweatpants",
-      "is_giftcard": false,
-      "weight": 400,
-      "images": [
-        "https://medusa-public-images.s3.eu-west-1.amazonaws.com/sweatpants-gray-front.png",
-        "https://medusa-public-images.s3.eu-west-1.amazonaws.com/sweatpants-gray-back.png"
-      ],
-      "options": [
-        {
-          "title": "Size",
-          "values": [
-            "S",
-            "M",
-            "L",
-            "XL"
-          ]
-        }
-      ],
-      "variants": [
-        {
-          "title": "S",
-          "prices": [
-            {
-              "currency_code": "eur",
-              "amount": 2950
-            },
-            {
-              "currency_code": "usd",
-              "amount": 3350
-            }
-          ],
-          "options": [
-            {
-              "value": "S"
-            }
-          ],
-          "inventory_quantity": 100,
-          "manage_inventory": true
-        },
-        {
-          "title": "M",
-          "prices": [
-            {
-              "currency_code": "eur",
-              "amount": 2950
-            },
-            {
-              "currency_code": "usd",
-              "amount": 3350
-            }
-          ],
-          "options": [
-            {
-              "value": "M"
-            }
-          ],
-          "inventory_quantity": 100,
-          "manage_inventory": true
-        },
-        {
-          "title": "L",
-          "prices": [
-            {
-              "currency_code": "eur",
-              "amount": 2950
-            },
-            {
-              "currency_code": "usd",
-              "amount": 3350
-            }
-          ],
-          "options": [
-            {
-              "value": "L"
-            }
-          ],
-          "inventory_quantity": 100,
-          "manage_inventory": true
-        },
-        {
-          "title": "XL",
-          "prices": [
-            {
-              "currency_code": "eur",
-              "amount": 2950
-            },
-            {
-              "currency_code": "usd",
-              "amount": 3350
-            }
-          ],
-          "options": [
-            {
-              "value": "XL"
-            }
-          ],
-          "inventory_quantity": 100,
-          "manage_inventory": true
-        }
-      ]
-    },
-    {
-      "title": "Medusa Shorts",
-      "categories": [
-        {
-          "id": "pcat_merch"
-        }
-      ],
-      "subtitle": null,
-      "description": "Reimagine the feeling of classic shorts. With our cotton shorts, everyday essentials no longer have to be ordinary.",
-      "handle": "shorts",
-      "is_giftcard": false,
-      "weight": 400,
-      "images": [
-        "https://medusa-public-images.s3.eu-west-1.amazonaws.com/shorts-vintage-front.png",
-        "https://medusa-public-images.s3.eu-west-1.amazonaws.com/shorts-vintage-back.png"
-      ],
-      "options": [
-        {
-          "title": "Size",
-          "values": [
-            "S",
-            "M",
-            "L",
-            "XL"
-          ]
-        }
-      ],
-      "variants": [
-        {
-          "title": "S",
-          "prices": [
-            {
-              "currency_code": "eur",
-              "amount": 2500
-            },
-            {
-              "currency_code": "usd",
-              "amount": 2850
-            }
-          ],
-          "options": [
-            {
-              "value": "S"
-            }
-          ],
-          "inventory_quantity": 100,
-          "manage_inventory": true
-        },
-        {
-          "title": "M",
-          "prices": [
-            {
-              "currency_code": "eur",
-              "amount": 2500
-            },
-            {
-              "currency_code": "usd",
-              "amount": 2850
-            }
-          ],
-          "options": [
-            {
-              "value": "M"
-            }
-          ],
-          "inventory_quantity": 100,
-          "manage_inventory": true
-        },
-        {
-          "title": "L",
-          "prices": [
-            {
-              "currency_code": "eur",
-              "amount": 2500
-            },
-            {
-              "currency_code": "usd",
-              "amount": 2850
-            }
-          ],
-          "options": [
-            {
-              "value": "L"
-            }
-          ],
-          "inventory_quantity": 100,
-          "manage_inventory": true
-        },
-        {
-          "title": "XL",
-          "prices": [
-            {
-              "currency_code": "eur",
-              "amount": 2500
-            },
-            {
-              "currency_code": "usd",
-              "amount": 2850
-            }
-          ],
-          "options": [
-            {
-              "value": "XL"
-            }
-          ],
-          "inventory_quantity": 100,
-          "manage_inventory": true
-        }
-      ]
-    },
-    {
-      "title": "Medusa Hoodie",
-      "categories": [
-        {
-          "id": "pcat_merch"
-        },
-        {
-          "id": "pcat_hidden_featured"
-        }
-      ],
-      "subtitle": null,
-      "description": "Reimagine the feeling of a classic hoodie. With our cotton hoodie, everyday essentials no longer have to be ordinary.",
-      "handle": "hoodie",
-      "is_giftcard": false,
-      "weight": 400,
-      "images": [
-        "https://medusa-public-images.s3.eu-west-1.amazonaws.com/black_hoodie_front.png",
-        "https://medusa-public-images.s3.eu-west-1.amazonaws.com/black_hoodie_back.png"
-      ],
-      "options": [
-        {
-          "title": "Size",
-          "values": [
-            "S",
-            "M",
-            "L",
-            "XL"
-          ]
-        }
-      ],
-      "variants": [
-        {
-          "title": "S",
-          "prices": [
-            {
-              "currency_code": "eur",
-              "amount": 3650
-            },
-            {
-              "currency_code": "usd",
-              "amount": 4150
-            }
-          ],
-          "options": [
-            {
-              "value": "S"
-            }
-          ],
-          "inventory_quantity": 100,
-          "manage_inventory": true
-        },
-        {
-          "title": "M",
-          "prices": [
-            {
-              "currency_code": "eur",
-              "amount": 3650
-            },
-            {
-              "currency_code": "usd",
-              "amount": 4150
-            }
-          ],
-          "options": [
-            {
-              "value": "M"
-            }
-          ],
-          "inventory_quantity": 100,
-          "manage_inventory": true
-        },
-        {
-          "title": "L",
-          "prices": [
-            {
-              "currency_code": "eur",
-              "amount": 3650
-            },
-            {
-              "currency_code": "usd",
-              "amount": 4150
-            }
-          ],
-          "options": [
-            {
-              "value": "L"
-            }
-          ],
-          "inventory_quantity": 100,
-          "manage_inventory": true
-        },
-        {
-          "title": "XL",
-          "prices": [
-            {
-              "currency_code": "eur",
-              "amount": 3650
-            },
-            {
-              "currency_code": "usd",
-              "amount": 4150
-            }
-          ],
-          "options": [
-            {
-              "value": "XL"
-            }
-          ],
-          "inventory_quantity": 100,
-          "manage_inventory": true
-        }
-      ]
-    },
-    {
-      "title": "Medusa Longsleeve",
-      "categories": [
-        {
-          "id": "pcat_shirts"
-        },
-        {
-          "id": "pcat_hidden_featured"
-        }
-      ],
-      "subtitle": null,
-      "description": "Reimagine the feeling of a classic longsleeve. With our cotton longsleeve, everyday essentials no longer have to be ordinary.",
-      "handle": "longsleeve",
-      "is_giftcard": false,
-      "weight": 400,
-      "images": [
-        "https://medusa-public-images.s3.eu-west-1.amazonaws.com/ls-black-front.png",
-        "https://medusa-public-images.s3.eu-west-1.amazonaws.com/ls-black-back.png"
-      ],
-      "options": [
-        {
-          "title": "Size",
-          "values": [
-            "S",
-            "M",
-            "L",
-            "XL"
-          ]
-        }
-      ],
-      "variants": [
-        {
-          "title": "S",
-          "prices": [
-            {
-              "currency_code": "eur",
-              "amount": 3650
-            },
-            {
-              "currency_code": "usd",
-              "amount": 4150
-            }
-          ],
-          "options": [
-            {
-              "value": "S"
-            }
-          ],
-          "inventory_quantity": 100,
-          "manage_inventory": true
-        },
-        {
-          "title": "M",
-          "prices": [
-            {
-              "currency_code": "eur",
-              "amount": 3650
-            },
-            {
-              "currency_code": "usd",
-              "amount": 4150
-            }
-          ],
-          "options": [
-            {
-              "value": "M"
-            }
-          ],
-          "inventory_quantity": 100,
-          "manage_inventory": true
-        },
-        {
-          "title": "L",
-          "prices": [
-            {
-              "currency_code": "eur",
-              "amount": 3650
-            },
-            {
-              "currency_code": "usd",
-              "amount": 4150
-            }
-          ],
-          "options": [
-            {
-              "value": "L"
-            }
-          ],
-          "inventory_quantity": 100,
-          "manage_inventory": true
-        },
-        {
-          "title": "XL",
-          "prices": [
-            {
-              "currency_code": "eur",
-              "amount": 3650
-            },
-            {
-              "currency_code": "usd",
-              "amount": 4150
-            }
-          ],
-          "options": [
-            {
-              "value": "XL"
-            }
-          ],
-          "inventory_quantity": 100,
-          "manage_inventory": true
-        }
-      ]
-    },
-    {
-      "title": "Medusa Coffee Mug",
-      "categories": [
-        {
-          "id": "pcat_merch"
-        },
-        {
-          "id": "pcat_hidden_featured"
-        }
-      ],
-      "subtitle": null,
-      "description": "Every programmer's best friend.",
-      "handle": "coffee-mug",
-      "is_giftcard": false,
-      "weight": 400,
-      "images": [
-        "https://medusa-public-images.s3.eu-west-1.amazonaws.com/coffee-mug.png"
-      ],
-      "options": [
-        {
-          "title": "Size",
-          "values": [
-            "One Size"
-          ]
-        }
-      ],
-      "variants": [
-        {
-          "title": "One Size",
-          "prices": [
-            {
-              "currency_code": "eur",
-              "amount": 1000
-            },
-            {
-              "currency_code": "usd",
-              "amount": 1200
-            }
-          ],
-          "options": [
-            {
-              "value": "One Size"
+              "value": "100x100"
             }
           ],
           "inventory_quantity": 100,
@@ -968,39 +234,18 @@
   ],
   "categories": [
     {
-      "id": "pcat_pants",
-      "name": "Pants",
+      "id": "pcat_hologramms",
+      "name": "Голограммы",
       "rank": 0,
       "category_children": [],
-      "handle": "pants"
+      "handle": "hologramms"
     },
     {
-      "id": "pcat_shirts",
-      "name": "Shirts",
+      "id": "pcat_stickers",
+      "name": "Наклейки",
       "rank": 0,
       "category_children": [],
-      "handle": "shirts"
-    },
-    {
-      "id": "pcat_merch",
-      "name": "Merch",
-      "rank": 0,
-      "category_children": [],
-      "handle": "merch"
-    },
-    {
-      "id": "pcat_hidden_carousel",
-      "name": "Hidden homepage carousel",
-      "rank": 0,
-      "category_children": [],
-      "handle": "hidden-homepage-carousel"
-    },
-    {
-      "id": "pcat_hidden_featured",
-      "name": "Hidden homepage featured",
-      "rank": 0,
-      "category_children": [],
-      "handle": "hidden-homepage-featured-items"
+      "handle": "stickers"
     }
   ]
 }

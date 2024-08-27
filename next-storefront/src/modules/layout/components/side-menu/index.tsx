@@ -10,11 +10,11 @@ import LocalizedClientLink from "@modules/common/components/localized-client-lin
 import CountrySelect from "../country-select"
 
 const SideMenuItems = {
-  Home: "/",
-  Store: "/store",
-  Search: "/search",
-  Account: "/account",
-  Cart: "/cart",
+  Главная: "/",
+  Магазин: "/store",
+  Поиск: "/search",
+  Аккаунт: "/account",
+  Корзина: "/cart",
 }
 
 const SideMenu = ({ regions }: { regions: Region[] | null }) => {
@@ -28,7 +28,9 @@ const SideMenu = ({ regions }: { regions: Region[] | null }) => {
             <>
               <div className="relative flex h-full">
                 <Popover.Button data-testid="nav-menu-button" className="relative h-full flex items-center transition-all ease-out duration-200 focus:outline-none hover:text-ui-fg-base">
-                  Menu
+                  <svg width={24} height={24} fill="none" strokeWidth={1.5} stroke="black" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12H12m-8.25 5.25h16.5" />
+                  </svg>
                 </Popover.Button>
               </div>
 
@@ -85,8 +87,7 @@ const SideMenu = ({ regions }: { regions: Region[] | null }) => {
                         />
                       </div>
                       <Text className="flex justify-between txt-compact-small">
-                        © {new Date().getFullYear()} Medusa Store. All rights
-                        reserved.
+                        © {new Date().getFullYear()} Все права защищены
                       </Text>
                     </div>
                   </div>
