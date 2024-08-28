@@ -3,16 +3,16 @@ import { Text } from "@medusajs/ui"
 
 import InteractiveLink from "@modules/common/components/interactive-link"
 import ProductPreview from "@modules/products/components/product-preview"
-import { ProductCollectionWithPreviews } from "types/global"
+import { ProductCategoryWithPreviews } from "types/global"
 
 export default function ProductRail({
-  collection,
+  category,
   region,
 }: {
-  collection: ProductCollectionWithPreviews
+  category: ProductCategoryWithPreviews
   region: Region
 }) {
-  const { products } = collection
+  const { products } = category
 
   if (!products) {
     return null
@@ -21,8 +21,8 @@ export default function ProductRail({
   return (
     <div className="content-container py-12 small:py-24">
       <div className="flex justify-between mb-8">
-        <Text className="txt-xlarge">{collection.title}</Text>
-        <InteractiveLink href={`/collections/${collection.handle}`}>
+        <Text className="txt-xlarge">{category.name}</Text>
+        <InteractiveLink href={`/collections/${category.handle}`}>
           Показать все товары
         </InteractiveLink>
       </div>

@@ -25,9 +25,13 @@ export type ProductPreviewType = {
 }
 
 export type ProductCollectionWithPreviews = Omit<
-  ProductCollection,
+  ProductCategory,
   "products"
 > & {
+  products: ProductPreviewType[]
+}
+
+export type ProductCategoryWithPreviews = Omit<ProductCategory, "products"> & {
   products: ProductPreviewType[]
 }
 
